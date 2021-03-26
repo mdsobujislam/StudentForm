@@ -1,0 +1,49 @@
+﻿@model IEnumerable<StudentForm.Models.Student>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col">
+        <h2>Student Form</h2>
+        <table class="table table-bordered">
+            <thead class="thead-dark col-md-4">
+                <tr>
+                    <th>@Html.DisplayNameFor(x => x.StudentName)</th>
+                    <th>@Html.DisplayNameFor(x => x.FatherName)</th>
+                    <th>@Html.DisplayNameFor(x => x.MotherName)</th>
+                    <th>@Html.DisplayNameFor(x => x.Email)</th>
+                    <th>@Html.DisplayNameFor(x => x.PhoneNo)</th>
+                    <th>@Html.DisplayNameFor(x => x.Religious)</th>
+                    <th>@Html.DisplayNameFor(x => x.Gender)</th>
+                    <th>@Html.DisplayNameFor(x => x.DateOfBirth)</th>
+                    <th>@Html.DisplayNameFor(x => x.PresentAddress)</th>
+                    <th>@Html.DisplayNameFor(x => x.PermanentAddress)</th>
+                    <th>@Html.DisplayNameFor(x => x.Qualification)</th>
+                    <th>@Html.DisplayNameFor(x => x.CourseApplied)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var v in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(x => v.StudentName)</td>
+                        <td>@Html.DisplayFor(x => v.FatherName)</td>
+                        <td>@Html.DisplayFor(x => v.MotherName)</td>
+                        <td>@Html.DisplayFor(x => v.Email)</td>
+                        <td>@Html.DisplayFor(x => v.PhoneNo)</td>
+                        <td>@Html.DisplayFor(x => v.Religious)</td>
+                        <td>@Html.DisplayFor(x => v.Gender)</td>
+                        <td>@Html.DisplayFor(x => v.DateOfBirth)</td>
+                        <td>@Html.DisplayFor(x => v.PresentAddress)</td>
+                        <td>@Html.DisplayFor(x => v.PermanentAddress)</td>
+                        <td>@Html.DisplayFor(x => v.Qualification)</td>
+                        <td>@Html.DisplayFor(x => v.CourseApplied)</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
